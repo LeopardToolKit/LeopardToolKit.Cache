@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Gary Zhu</Authors>
+    <Company>LeopardToolKit</Company>
+    <Product>LeopardToolKit</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <PackageProjectUrl>https://github.com/LeopardToolKit/LeopardToolKit.Cache</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LeopardToolKit/LeopardToolKit.Cache</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>cache</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
