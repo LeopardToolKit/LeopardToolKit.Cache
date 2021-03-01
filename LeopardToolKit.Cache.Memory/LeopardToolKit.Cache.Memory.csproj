@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Gary Zhu</Authors>
+    <Product>LeopardToolKit</Product>
+    <Company>LeopardToolKit</Company>
+    <RepositoryUrl>https://github.com/LeopardToolKit/LeopardToolKit.Cache</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>cache,memorycache</PackageTags>
+    <PackageProjectUrl>https://github.com/LeopardToolKit/LeopardToolKit.Cache</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LeopardToolKit.Cache.Abstraction" Version="1.0.1" />
+    <PackageReference Include="System.Text.Json" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>

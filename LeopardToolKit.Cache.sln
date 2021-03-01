@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeopardToolKit.Cache.Abstraction", "LeopardToolKit.Cache.Abstraction\LeopardToolKit.Cache.Abstraction.csproj", "{577DCBF5-2807-4472-907C-DACFC126D154}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeopardToolKit.Cache.Memory", "LeopardToolKit.Cache.Memory\LeopardToolKit.Cache.Memory.csproj", "{D8B946D1-6022-4146-B490-1B80BB7AD2BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeopardToolKit.Cache.Redis", "LeopardToolKit.Cache.Redis\LeopardToolKit.Cache.Redis.csproj", "{729D99C9-F1E7-4956-A187-BDF1A4454FC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeopardToolKit.Cache.Tests", "LeopardToolKit.Cache.Tests\LeopardToolKit.Cache.Tests.csproj", "{BE191874-51B7-4933-8B17-D3C9C57B0610}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{577DCBF5-2807-4472-907C-DACFC126D154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577DCBF5-2807-4472-907C-DACFC126D154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577DCBF5-2807-4472-907C-DACFC126D154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577DCBF5-2807-4472-907C-DACFC126D154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B946D1-6022-4146-B490-1B80BB7AD2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B946D1-6022-4146-B490-1B80BB7AD2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B946D1-6022-4146-B490-1B80BB7AD2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B946D1-6022-4146-B490-1B80BB7AD2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729D99C9-F1E7-4956-A187-BDF1A4454FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729D99C9-F1E7-4956-A187-BDF1A4454FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729D99C9-F1E7-4956-A187-BDF1A4454FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729D99C9-F1E7-4956-A187-BDF1A4454FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE191874-51B7-4933-8B17-D3C9C57B0610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE191874-51B7-4933-8B17-D3C9C57B0610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE191874-51B7-4933-8B17-D3C9C57B0610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE191874-51B7-4933-8B17-D3C9C57B0610}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E126E985-C34B-498A-9C63-8E316A9FBDD2}
+	EndGlobalSection
+EndGlobal
