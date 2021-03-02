@@ -22,7 +22,7 @@ namespace LeopardToolKit.Cache.Tests
             var cache = provider.GetRequiredService<ICache<CacheTest>>();
             int value = 2;
             string key = "int";
-            cache.Put(key, value, TimeSpan.FromSeconds(5));
+            cache.Put(key, value, TimeSpan.FromSeconds(3));
             var cachedValue = cache.Get<int>(key);
             Assert.AreEqual(value, cachedValue);
             await Task.Delay(5000);
