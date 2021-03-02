@@ -13,11 +13,11 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>The abstraction layer for leopardtoolkit cache. leopardtoolkit cache Let you use different cache type in same application.Support Memory Cache.</Description>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LeopardToolKit.Cache.Abstraction" Version="1.0.2" />
+    <PackageReference Include="LeopardToolKit.Cache.Abstraction" Version="1.1.0" />
     <PackageReference Include="System.Text.Json" Version="5.0.1" />
   </ItemGroup>
 
