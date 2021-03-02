@@ -12,8 +12,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Description>The abstraction layer for leopardtoolkit cache. leopardtoolkit cache Let you use different cache type in same application.Support Memory Cache.</Description>
-    <Version>1.1.0</Version>
+    <Description>The memory provider for leopardtoolkit cache. leopardtoolkit cache Let you use different cache type in same application.</Description>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
