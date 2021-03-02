@@ -9,54 +9,75 @@ namespace LeopardToolKit.Cache
 {
     public class CacheFactory : ICacheFactory
     {
-        private readonly ConcurrentDictionary<string, ICacheProvider> providers;
-        private readonly CacheOption cacheOption;
+        private readonly ConcurrentDictionary<string, ICacheProvider> _categoryProvidersMapping;
+        private readonly CacheOption _cacheOption;
+        private readonly IEnumerable<ICacheProvider> _cacheProviders;
 
-        public CacheFactory(IOptions<CacheOption> options, IEnumerable<ICacheProvider> cacheStoreProviders)
+        public CacheFactory(IOptions<CacheOption> options, IEnumerable<ICacheProvider> cacheProviders)
         {
-            this.cacheOption = options.Value;
-            this.providers = new ConcurrentDictionary<string, ICacheProvider>();
-            foreach (var provider in cacheStoreProviders)
-            {
-                providers.TryAdd(GetProviderName(provider.GetType()), provider);
-            }
+            this._cacheOption = options.Value;
+            this._categoryProvidersMapping = new ConcurrentDictionary<string, ICacheProvider>();
+            this._cacheProviders = cacheProviders;
         }
 
         public ICache CreateCache(string categoryName)
         {
-            var providerType = CacheProviderSelector(categoryName);
-
-            if(providers.TryGetValue(providerType, out var provider))
+            if(_categoryProvidersMapping.TryGetValue(categoryName, out var provider))
             {
                 return provider.CreateCache(categoryName ?? "Default");
             }
             else
             {
-                throw new Exception($"Can not find a provider for provider type: {providerType}");
+                provider = CacheProviderSelector(categoryName);
+                if(provider != null)
+                {
+                    _categoryProvidersMapping.TryAdd(categoryName, provider);
+                    return provider.CreateCache(categoryName ?? "Default");
+                }
+                else
+                {
+                    throw new ArgumentException($"Cannot find any cache provider for the category {categoryName}");
+                }
             }
         }
 
-        private string GetProviderName(Type providerType)
+        private ICacheProvider CacheProviderSelector(string categoryName)
         {
-            var attr =providerType.GetCustomAttribute<CacheProviderAliasAttribute>();
-            return attr?.Name ?? providerType.FullName;
-        }
-
-        private string CacheProviderSelector(string categoryName)
-        {
-            if(this.cacheOption.CacheCategory == null || string.IsNullOrEmpty(categoryName))
+            string providerName;
+            if(this._cacheOption.CacheCategory == null || string.IsNullOrEmpty(categoryName))
             {
-                return this.cacheOption.DefaultProvider;
-            }
-            var mathcedProviders = this.cacheOption.CacheCategory.Where(c => c.CacheCategory.StartsWith(categoryName));
-            if (mathcedProviders.Any())
-            {
-                return mathcedProviders.OrderByDescending(c => c.CacheCategory.Length).First().ProviderType;
+                providerName = this._cacheOption.DefaultProvider;
             }
             else
             {
-                return this.cacheOption.DefaultProvider;
+                var mathcedCategories = this._cacheOption.CacheCategory.Where(c => c.Key.StartsWith(categoryName));
+                if (mathcedCategories.Any())
+                {
+                    providerName = mathcedCategories.OrderByDescending(c => c.Key.Length).First().Value;
+                }
+                else
+                {
+                    providerName = this._cacheOption.DefaultProvider;
+                }
             }
+
+            return _cacheProviders.FirstOrDefault(p => {
+                var providerType = p.GetType();
+                if(providerType.Name == providerName)
+                {
+                    return true;
+                }
+
+                var aliasAttr = providerType.GetCustomAttribute<CacheProviderAliasAttribute>();
+                if(aliasAttr == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return aliasAttr.Name == providerName;
+                }
+            });
         }
     }
 }
