@@ -2,7 +2,7 @@ name: LeopardToolKit Cache Abstraction Package Publish
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: ['LeopardToolKit.Cache.Abstraction/**']
 
 jobs:

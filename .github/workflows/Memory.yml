@@ -2,7 +2,7 @@ name: LeopardToolKit Cache Memory Package Publish
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: ['LeopardToolKit.Cache.Memory/**']
 
 jobs:
