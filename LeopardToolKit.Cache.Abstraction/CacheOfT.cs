@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeopardToolKit.Cache
 {
     public class Cache<TCategory> : ICache<TCategory> where TCategory : class
     {
-        private ICache cache;
+        private ICache _innerCache;
 
         public Cache(ICacheFactory cacheFactory)
         {
             this.CategoryName = typeof(TCategory).FullName;
-            this.cache = cacheFactory.CreateCache(this.CategoryName);
+            this._innerCache = cacheFactory.CreateCache(this.CategoryName);
             
         }
 
@@ -19,17 +17,17 @@ namespace LeopardToolKit.Cache
 
         public T Get<T>(string key)
         {
-            return this.cache.Get<T>(key);
+            return this._innerCache.Get<T>(key);
         }
 
         public void Put<T>(string key, T value, TimeSpan absoluteExpirationTime)
         {
-            this.cache.Put(key, value, absoluteExpirationTime);
+            this._innerCache.Put(key, value, absoluteExpirationTime);
         }
 
         public void Remove(string key)
         {
-            this.cache.Remove(key);
+            this._innerCache.Remove(key);
         }
     }
 }
