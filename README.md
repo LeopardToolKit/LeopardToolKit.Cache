@@ -1,6 +1,13 @@
 # LeopardToolKit.Cache
 A useful library to let you use different cache type in same application.
 
+## Build
+[![LeopardToolKit Cache Abstraction Package Publish](https://github.com/LeopardToolKit/LeopardToolKit.Cache/actions/workflows/Abstraction.yml/badge.svg)](https://github.com/LeopardToolKit/LeopardToolKit.Cache/actions/workflows/Abstraction.yml)
+
+[![LeopardToolKit Cache Memory Package Publish](https://github.com/LeopardToolKit/LeopardToolKit.Cache/actions/workflows/Memory.yml/badge.svg)](https://github.com/LeopardToolKit/LeopardToolKit.Cache/actions/workflows/Memory.yml)
+
+[![LeopardToolKit Cache Redis Package Publish](https://github.com/LeopardToolKit/LeopardToolKit.Cache/actions/workflows/Redis.yml/badge.svg)](https://github.com/LeopardToolKit/LeopardToolKit.Cache/actions/workflows/Redis.yml)
+
 ## Packages
 
 | **Name** | **Nuget** |
