@@ -6,6 +6,6 @@ namespace LeopardToolKit.Cache
     {
         public string DefaultProvider { get; set; }
 
-        public Dictionary<string,string> CacheCategory { get; set; }
+        public Dictionary<string,string> CacheCategories { get; set; }
     }
 }

@@ -44,13 +44,13 @@ namespace LeopardToolKit.Cache
         private ICacheProvider CacheProviderSelector(string categoryName)
         {
             string providerName;
-            if(this._cacheOption.CacheCategory == null || string.IsNullOrEmpty(categoryName))
+            if(this._cacheOption.CacheCategories == null || string.IsNullOrEmpty(categoryName))
             {
                 providerName = this._cacheOption.DefaultProvider;
             }
             else
             {
-                var mathcedCategories = this._cacheOption.CacheCategory.Where(c => c.Key.StartsWith(categoryName));
+                var mathcedCategories = this._cacheOption.CacheCategories.Where(c => c.Key.StartsWith(categoryName));
                 if (mathcedCategories.Any())
                 {
                     providerName = mathcedCategories.OrderByDescending(c => c.Key.Length).First().Value;
