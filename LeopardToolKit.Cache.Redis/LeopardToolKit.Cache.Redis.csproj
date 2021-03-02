@@ -11,10 +11,11 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>The abstraction layer for leopardtoolkit cache. leopardtoolkit cache Let you use different cache type in same application. Support Redis cache.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LeopardToolKit.Cache.Abstraction" Version="1.0.1" />
+    <PackageReference Include="LeopardToolKit.Cache.Abstraction" Version="1.0.2" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
     <PackageReference Include="System.Text.Json" Version="5.0.1" />
   </ItemGroup>

@@ -61,7 +61,7 @@ namespace LeopardToolKit.Cache.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestSetting()
         {
             ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();

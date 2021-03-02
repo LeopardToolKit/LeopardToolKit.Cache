@@ -16,27 +16,20 @@ In your `appsettings.json` add follow:
 {
   "Cache": {
     "DefaultProvider": "Memory",
-    "CacheCategory": [
-      {
-        "CacheCategory": "LeopardToolKit.Cache.Tests.CacheTest",
-        "ProviderType": "Memory"
-      },
-      {
-        "CacheCategory": "Foo",
-        "ProviderType": "Memory"
-      }
-    ]
+    "CacheCategories": {
+      "LeopardToolKit.Cache.Tests.CacheTest": "Memory",
+      "Foo": "Memory"
+    }
   }
 }
-
 ```
 
 then in `ConfigureServices`, add following:
 ```csharp
       services.AddCache(builder => {
-                builder.AddMemoryProvider();
-                builder.AddConfiguration(configuration.GetSection("Cache"));
-            });
+           builder.AddMemoryProvider();
+           builder.AddConfiguration(configuration.GetSection("Cache"));
+      });
 ```
 
 At last, in any place where you want to use cache, just inject following:
