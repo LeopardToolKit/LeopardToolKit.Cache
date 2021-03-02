@@ -7,7 +7,7 @@ namespace LeopardToolKit.Cache
     public interface ICacheProvider
     {
         /// <summary>
-        /// Creates a data store.
+        /// Creates a cache.
         /// </summary>
         /// <param name="categoryName"></param>
         /// <returns><see cref="ICache"/> if successfull, otherwise null.</returns>
