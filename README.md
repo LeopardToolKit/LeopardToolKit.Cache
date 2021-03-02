@@ -24,8 +24,8 @@ In your `appsettings.json` add follow:
   "Cache": {
     "DefaultProvider": "Memory",
     "CacheCategories": {
-      "LeopardToolKit.Cache.Tests.CacheTest": "Memory",
-      "Foo": "Memory"
+      "LeopardToolKit.Cache": "Redis",
+      ""LeopardToolKit.Cache.Tests.CacheTest": "Memory"
     }
   }
 }
