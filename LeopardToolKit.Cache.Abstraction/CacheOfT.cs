@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace LeopardToolKit.Cache
 {
     public class Cache<TCategory> : ICache<TCategory> where TCategory : class
