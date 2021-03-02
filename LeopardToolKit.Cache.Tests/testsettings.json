@@ -1,6 +1,6 @@
 {
   "Cache": {
-    "DefaultProvider": "Memory",
+    "DefaultProvider": "",
     "CacheCategory": [
       {
         "CacheCategory": "LeopardToolKit.Cache.Tests.CacheTest",
