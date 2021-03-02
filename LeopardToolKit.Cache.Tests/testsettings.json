@@ -1,15 +1,9 @@
 {
   "Cache": {
     "DefaultProvider": "",
-    "CacheCategory": [
-      {
-        "CacheCategory": "LeopardToolKit.Cache.Tests.CacheTest",
-        "ProviderType": "Memory"
-      },
-      {
-        "CacheCategory": "Foo",
-        "ProviderType": "Memory"
-      }
-    ]
+    "CacheCategories": {
+      "LeopardToolKit.Cache.Tests.CacheTest": "Memory",
+      "Foo": "Memory"
+    }
   }
 }

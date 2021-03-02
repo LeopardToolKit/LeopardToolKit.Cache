@@ -6,14 +6,14 @@
     <Company>LeopardToolKit</Company>
     <Product>LeopardToolKit</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
     <PackageProjectUrl>https://github.com/LeopardToolKit/LeopardToolKit.Cache</PackageProjectUrl>
     <RepositoryUrl>https://github.com/LeopardToolKit/LeopardToolKit.Cache</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>cache</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Description>The abstraction layer for leopardtoolkit cache</Description>
+    <Description>The abstraction layer for leopardtoolkit cache. leopardtoolkit cache Let you use different cache type in same application.</Description>
   </PropertyGroup>
 
   <ItemGroup>
