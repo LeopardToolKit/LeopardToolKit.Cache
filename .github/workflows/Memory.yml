@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: dotnet build LeopardToolKit.Cache.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test LeopardToolKit.Cache.Test/LeopardToolKit.Cache.Test.csproj --no-restore --verbosity normal
+      run: dotnet test LeopardToolKit.Cache.Tests/LeopardToolKit.Cache.Tests.csproj --no-restore --verbosity normal
       
     - name: Publish NuGet
       uses: rohith/publish-nuget@v2.2.1
